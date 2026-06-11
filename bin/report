@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+D="$(cd "$(dirname "$0")" && pwd)"
+bash "$(dirname "$D")/scripts/reports/daily.sh"
+bash "$(dirname "$D")/scripts/alerts/health_score.sh"

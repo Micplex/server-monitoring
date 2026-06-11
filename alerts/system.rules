@@ -1,0 +1,10 @@
+# System alert rules
+# Format: metric|condition|threshold_var|severity
+cpu_pct|>=|CPU_CRITICAL|CRITICAL
+cpu_pct|>=|CPU_WARNING|WARNING
+ram_pct|>=|RAM_CRITICAL|CRITICAL
+ram_pct|>=|RAM_WARNING|WARNING
+disk_pct|>=|DISK_CRITICAL|CRITICAL
+disk_pct|>=|DISK_WARNING|WARNING
+swap_pct|>=|SWAP_CRITICAL|CRITICAL
+swap_pct|>=|SWAP_WARNING|WARNING

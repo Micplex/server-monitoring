@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  monitoring:
+    build: ..
+    container_name: linux-monitoring-suite
+    restart: unless-stopped
+    volumes:
+      - ../logs:/opt/monitoring/logs
+      - ../data:/opt/monitoring/data
+      - ../config:/opt/monitoring/config:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - LOG_LEVEL=INFO
+    network_mode: host
+    pid: host

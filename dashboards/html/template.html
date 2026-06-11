@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta http-equiv="refresh" content="300">
+<title>System Dashboard</title>
+<style>body{font-family:monospace;background:#0d1117;color:#c9d1d9;padding:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px}
+.card h3{color:#8b949e;font-size:.7em;text-transform:uppercase;margin:0 0 8px}
+.metric{font-size:2em;font-weight:bold}
+.bar{height:6px;background:#21262d;border-radius:3px;margin-top:8px}
+.bar-fill{height:6px;border-radius:3px}
+footer{color:#8b949e;font-size:.7em;text-align:center;margin-top:20px}</style>
+</head><body>
+<h2>🖥️ {{HOSTNAME}}</h2><p style="color:#8b949e">{{TIMESTAMP}}</p>
+<div class="cards">
+  <div class="card"><h3>CPU</h3><div class="metric" style="color:{{CPU_COLOR}}">{{CPU}}%</div><div class="bar"><div class="bar-fill" style="width:{{CPU}}%;background:{{CPU_COLOR}}"></div></div></div>
+  <div class="card"><h3>Memory</h3><div class="metric" style="color:{{MEM_COLOR}}">{{MEM}}%</div><div class="bar"><div class="bar-fill" style="width:{{MEM}}%;background:{{MEM_COLOR}}"></div></div></div>
+  <div class="card"><h3>Disk (/)</h3><div class="metric">{{DISK}}%</div></div>
+  <div class="card"><h3>Health Score</h3><div class="metric" style="color:#3fb950">{{SCORE}}/100</div></div>
+</div>
+<footer>Linux Monitoring Suite | {{HOSTNAME}} | Auto-refresh 5min</footer>
+</body></html>

@@ -1,0 +1,10 @@
+# Linux Monitoring Suite — Cron Jobs
+# Install with: bash cron/install-cron.sh
+*/5 * * * *   bash /opt/monitoring/bin/monitor
+*/15 * * * *  bash /opt/monitoring/bin/alert-check
+0 6 * * *     bash /opt/monitoring/bin/report
+0 6 * * 1     bash /opt/monitoring/scripts/reports/weekly.sh
+0 * * * *     bash /opt/monitoring/scripts/maintenance/rotate_logs.sh
+0 3 * * *     bash /opt/monitoring/scripts/maintenance/cleanup_data.sh
+0 2 * * 0     bash /opt/monitoring/scripts/maintenance/backup_config.sh
+*/30 * * * *  bash /opt/monitoring/bin/health 2>/dev/null

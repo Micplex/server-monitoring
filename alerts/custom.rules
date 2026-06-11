@@ -1,0 +1,2 @@
+# Custom alert rules — add yours here
+# Format: metric|condition|threshold_var|severity

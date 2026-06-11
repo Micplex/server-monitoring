@@ -1,0 +1,5 @@
+# Service alert rules
+service_failed|CRITICAL
+service_inactive|WARNING
+container_exited|CRITICAL
+container_crash_loop|WARNING
